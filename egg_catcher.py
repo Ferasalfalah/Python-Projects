@@ -2,8 +2,8 @@ from itertools import cycle
 from random import randrange
 from tkinter import Canvas, Tk, messagebox, font
 
-canvas_width = 800
-canvas_height = 400
+canvas_width = 1000
+canvas_height = 600
 
 root = Tk()
 root.title("Egg Catcher")
@@ -12,16 +12,16 @@ c.create_rectangle(-5, canvas_height-100, canvas_width+5, canvas_height+5, fill=
 c.create_oval(-80, -80, 120, 120, fill='orange', width=0)
 c.pack()
 
-color_cycle = cycle(["light blue", "light green", "light pink", "light yellow", "light cyan"])
+color_cycle = cycle(["black", "green", "red", "blue", "purple"])
 egg_width = 45
 egg_height = 55
 egg_score = 10
-egg_speed = 500
+egg_speed = 250
 egg_interval = 4000
 difficulty = 0.95
-catcher_color = "blue"
-catcher_width = 100
-catcher_height = 100
+catcher_color = "red"
+catcher_width = 150
+catcher_height = 150
 catcher_startx = canvas_width / 2 - catcher_width / 2
 catcher_starty = canvas_height - catcher_height - 20
 catcher_startx2 = catcher_startx + catcher_width
@@ -35,7 +35,7 @@ game_font.config(size=18)
 score = 0
 score_text = c.create_text(10, 10, anchor="nw", font=game_font, fill="darkblue", text="Score: "+ str(score))
 
-lives_remaining = 3
+lives_remaining = 5
 lives_text = c.create_text(canvas_width-10, 10, anchor="ne", font=game_font, fill="darkblue", text="Lives: "+ str(lives_remaining))
 
 eggs = []
@@ -102,5 +102,3 @@ root.after(1000, create_egg)
 root.after(1000, move_eggs)
 root.after(1000, check_catch)
 root.mainloop()
-
-#Coded with 💙 by Mr. Unity Buddy
