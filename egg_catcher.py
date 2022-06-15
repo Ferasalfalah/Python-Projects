@@ -12,11 +12,11 @@ c.create_rectangle(-5, canvas_height-100, canvas_width+5, canvas_height+5, fill=
 c.create_oval(-80, -80, 120, 120, fill='orange', width=0)
 c.pack()
 
-color_cycle = cycle(["light blue", "light green", "light pink", "light yellow", "light cyan"])
+color_cycle = cycle(["blue", " green", "dark red", "yellow", "cyan"])
 egg_width = 45
 egg_height = 55
 egg_score = 10
-egg_speed = 500
+egg_speed = 250
 egg_interval = 4000
 difficulty = 0.95
 catcher_color = "blue"
